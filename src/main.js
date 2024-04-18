@@ -41,8 +41,10 @@ import InputNumber from "primevue/inputnumber";
 import FloatLabel from "primevue/floatlabel";
 import Checkbox from "primevue/checkbox";
 import Rating from "primevue/rating";
+import router from "./router/index.js";
 
 createApp(App)
+    .use(router)
     .use(PrimeVue, {ripple: true})
     .use(ToastService)
     .use(DialogService)
