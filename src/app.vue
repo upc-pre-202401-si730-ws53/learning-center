@@ -6,6 +6,7 @@ export default {
       drawer: false,
       items: [
         { label: 'Home', to: '/home'},
+        { label: 'Tutorials', to: '/tutorials' },
         { label: 'About', to: '/about'}
       ]
     }
