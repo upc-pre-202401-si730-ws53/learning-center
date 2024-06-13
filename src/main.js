@@ -42,9 +42,13 @@ import FloatLabel from "primevue/floatlabel";
 import Checkbox from "primevue/checkbox";
 import Rating from "primevue/rating";
 import router from "./router/index.js";
+import {createPinia} from "pinia";
+
+const pinia = createPinia();
 
 createApp(App)
     .use(router)
+    .use(pinia)
     .use(PrimeVue, {ripple: true})
     .use(ToastService)
     .use(DialogService)
