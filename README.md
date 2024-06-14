@@ -23,3 +23,10 @@ Write the following commands in the terminal to start the mock API server.
 cd server
 sh start.sh
 ```
+## Identity and Access Management Features
+In this version, the application includes support for user identity and access management. The following features are available:
+- Sign Up
+- Sign In
+- Sign Out
+
+In order to use these features, you need to replace the server base path, so it references the Identity and Access Management Server implemented with ASP.NET Core Web API.
