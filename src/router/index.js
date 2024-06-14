@@ -25,7 +25,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
     let baseTitle = 'ACME Learning Center';
-    document.title = `${baseTitle} | ${to.meta['title']}}`;
+    document.title = `${baseTitle} | ${to.meta['title']}`;
     // Call the authentication guard
     authenticationGuard(to, from, next);
 });
