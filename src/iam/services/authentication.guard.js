@@ -18,5 +18,5 @@ export const authenticationGuard = (to, from, next) => {
     const routeRequiresToBeAuthenticated = !publicRoutes.includes(to.path);
 
     if (isAnonymous && routeRequiresToBeAuthenticated) return next('/sign-in');
-    next();
+    else next();
 }
