@@ -6,17 +6,16 @@ export default {
   name: "authentication-section",
   data() {
     return {
-      router: useRouter()
+      router: useRouter(),
+      authenticationStore: useAuthenticationStore()
     }
   },
   computed: {
     isSignedIn() {
-      let authenticationStore = useAuthenticationStore();
-      return authenticationStore.isSignedIn;
+      return this.authenticationStore.isSignedIn;
     },
     currentUsername() {
-      let authenticationStore = useAuthenticationStore();
-      return authenticationStore.currentUsername;
+      return this.authenticationStore.currentUsername;
     }
   },
   methods: {
@@ -27,8 +26,7 @@ export default {
       this.router.push({name: "sign-up"});
     },
     onSignOut() {
-      let authenticationStore = useAuthenticationStore();
-      authenticationStore.signOut(this.router);
+      this.authenticationStore.signOut(this.router);
     }
   }
 }
